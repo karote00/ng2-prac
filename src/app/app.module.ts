@@ -8,6 +8,8 @@ import { ToDoComponent } from './to-do/to-do.component';
 
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 
+import { TODOLISTS } from "./mockups/mock-todolist";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,7 @@ import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawe
     HttpModule,
     Angular2FontawesomeModule
   ],
-  providers: [],
+  providers: [TODOLISTS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

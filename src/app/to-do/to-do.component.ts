@@ -1,22 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-export class Hero {
-	id: number;
-	name: string;
-}
-
-const HEROES: Hero[] = [
-  { id: 11, name: 'Mr. Nice' },
-  { id: 12, name: 'Narco' },
-  { id: 13, name: 'Bombasto' },
-  { id: 14, name: 'Celeritas' },
-  { id: 15, name: 'Magneta' },
-  { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' }
-];
+import { Todo } from "app/models/todo";
 
 @Component({
   selector: 'app-to-do',
@@ -24,18 +7,16 @@ const HEROES: Hero[] = [
   styleUrls: ['./to-do.component.css']
 })
 export class ToDoComponent implements OnInit {
+  public selectedTodo = new Todo();
 
   constructor() { }
 
   ngOnInit() {
 
   }
-	heros = HEROES;
 
-  selectedHero = Hero;
-
-  onSelect(hero: Hero): void {
-  	this.selectedHero = hero;
+  onSelect(todo: Todo): void {
+  	this.selectedTodo = todo;
   }
 
 
